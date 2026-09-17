@@ -1,0 +1,95 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+:root { --dark: #111216; --purple: #9b61d1; --yellow: #f4ed00; --white: #fff; --text: #17171b; }
+html { scroll-behavior: smooth; }
+body { font-family: "DM Sans", sans-serif; color: var(--text); background: var(--dark); }
+a { color: inherit; text-decoration: none; }
+img { display: block; width: 100%; height: 100%; object-fit: cover; }
+.site-header { position: sticky; top: 0; z-index: 10; display: flex; align-items: center; justify-content: space-between; gap: 24px; padding: 20px 7%; background: rgba(17,18,22,.95); color: white; }
+.logo { font: 700 35px "Space Grotesk"; color: var(--yellow); }
+.nav { display: flex; gap: 28px; font-size: 14px; }
+.nav a:hover { color: var(--yellow); }
+.header-button, .button { display: inline-flex; justify-content: center; align-items: center; border: 0; border-radius: 30px; padding: 14px 24px; font-weight: 700; cursor: pointer; }
+.header-button { background: white; color: #111; font-size: 13px; }
+.menu-toggle { display: none; background: transparent; border: 0; color: white; font-size: 25px; }
+.section { padding: 90px 9%; }
+.section-dark { background: var(--dark); color: white; }
+.section-purple { background: var(--purple); color: #111; }
+.hero { min-height: 720px; display: grid; grid-template-columns: .85fr 1.15fr; align-items: center; gap: 8%; position: relative; overflow: hidden; }
+.hero-photo { height: 580px; background: #29242a; }
+.hero-photo img { object-position: center top; }
+.hero-content { position: relative; z-index: 1; }
+.eyebrow { color: var(--yellow); letter-spacing: 3px; font-weight: 700; margin-bottom: 12px; }
+.hero h1, .hero h2 { font: 700 clamp(70px, 10vw, 155px) "Space Grotesk"; line-height: .86; }
+.hero h1 { color: white; }
+.hero h2 { color: var(--purple); margin: 20px 0 35px; }
+.hero h2 span { color: white; }
+.hero-description { max-width: 480px; color: var(--yellow); line-height: 1.6; font-size: 17px; margin-bottom: 35px; }
+.button-purple { background: var(--purple); color: white; }
+.button-purple:hover { transform: translateY(-2px); }
+.star { font-size: 65px; color: white; }
+.star-one { position: absolute; right: 8%; top: 16%; }
+.star-two { position: absolute; right: 42%; bottom: 8%; }
+.social-strip { background: white; display: flex; justify-content: space-around; align-items: center; gap: 25px; padding: 25px 9%; text-align: center; }
+.social-links { display: flex; gap: 20px; }
+.social-strip a { text-decoration: underline; font-weight: 700; }
+.section-heading { display: flex; align-items: center; justify-content: center; gap: 30px; margin-bottom: 55px; text-align: center; }
+.section-heading h2 { font: 700 clamp(42px, 6vw, 90px) "Space Grotesk"; }
+.section-heading h2 span { color: var(--purple); }
+.project-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 70px 50px; }
+.project-card img { aspect-ratio: 16/9; background: #20212a; border-radius: 2px; }
+.project-info { padding-top: 18px; }
+.project-info h3 { font: 700 clamp(26px, 3vw, 45px) "Space Grotesk"; }
+.project-info p { font-family: Georgia, serif; font-size: 20px; margin-top: 8px; }
+.about { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 65px; }
+.about h2 { font: 700 clamp(55px, 7vw, 100px) "Space Grotesk"; line-height: .95; }
+.about h2 span { color: #111; }
+.about p, .about li { font-size: 17px; line-height: 1.5; }
+.about-intro p { margin-top: 50px; font-family: Georgia, serif; }
+.about h3 { font: 700 35px "Space Grotesk"; margin-bottom: 28px; }
+.about h4 { font-size: 17px; margin-top: 28px; }
+.about-column p { margin-top: 10px; }
+.about ul { padding-left: 22px; display: grid; gap: 35px; }
+.skills .section-heading h2 { color: white; }
+.skills-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 20px; text-align: center; }
+.skill-icon { width: 85px; height: 85px; display: grid; place-items: center; margin: auto auto 20px; border-radius: 16px; font: 700 35px "Space Grotesk"; background: white; color: #111; }
+.html-icon { color: #e44d26; }
+.css-icon { color: #1674d1; }
+.js-icon { background: #f7df1e; }
+.figma-icon { background: transparent; color: white; border: 4px solid white; border-radius: 50%; }
+.react-icon { background: transparent; color: #61dafb; font-size: 55px; }
+.bootstrap-icon { background: #7952b3; color: white; }
+.skill h3 { color: white; font-size: 16px; }
+.contact { display: grid; grid-template-columns: .8fr 1.2fr; gap: 90px; background: white; }
+.contact-copy h2 { font: 700 clamp(45px, 6vw, 85px) "Space Grotesk"; line-height: .95; }
+.contact-copy p { font-size: 17px; line-height: 1.5; margin-top: 45px; max-width: 400px; }
+.contact-form { display: grid; gap: 22px; }
+.contact-form label { display: grid; gap: 8px; font-size: 15px; }
+.contact-form input, .contact-form textarea { width: 100%; border: 0; background: #f0f0f0; padding: 17px; font: inherit; resize: vertical; }
+.contact-form .button { width: max-content; }
+.footer { display: flex; justify-content: flex-end; align-items: center; gap: 24px; padding: 30px 9%; }
+.footer a { font-weight: 700; }
+@media (max-width: 900px) {
+  .hero, .about, .contact { grid-template-columns: 1fr; }
+  .hero { padding-top: 55px; }
+  .hero-photo { max-height: 520px; }
+  .hero-content { padding-bottom: 40px; }
+  .about { gap: 45px; }
+  .skills-grid { grid-template-columns: repeat(3, 1fr); row-gap: 35px; }
+  .social-strip { flex-wrap: wrap; }
+}
+@media (max-width: 650px) {
+  .site-header { padding: 15px 5%; }
+  .menu-toggle { display: block; }
+  .nav { display: none; position: absolute; top: 75px; left: 0; right: 0; padding: 25px; flex-direction: column; background: var(--dark); text-align: center; }
+  .nav.open { display: flex; }
+  .header-button { display: none; }
+  .section { padding: 60px 6%; }
+  .hero { min-height: auto; gap: 35px; }
+  .hero-photo { height: 420px; }
+  .hero h1, .hero h2 { font-size: 70px; }
+  .project-grid { grid-template-columns: 1fr; gap: 45px; }
+  .section-heading { gap: 10px; }
+  .section-heading .star { font-size: 35px; }
+  .skills-grid { grid-template-columns: repeat(2, 1fr); }
+  .footer { flex-wrap: wrap; justify-content: center; text-align: center; }
+}
